@@ -1,0 +1,27 @@
+.offcanvas-style {
+  height: 100%;
+  background-color: #141414;
+  color: #f2ffe1;
+}
+
+.container {
+  background-color: #f2ffe1;
+  color: #141414;
+ 
+  margin-top: 10%;
+  
+}
+
+.description-layout {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-content: space-between;
+  height: 90%;
+  width: 90%;
+  border: 1px black solid;
+  position: absolute;
+
+}
+
+
