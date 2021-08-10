@@ -22,14 +22,14 @@ function Description({ match }) {
                     </Row>
                     <Row>
 
-                        <Col style={{ position: 'relative' }}>
+                        <Col sm={7} style={{ position: 'relative' }}>
                             <div>
                                 <Offcanvas.Body>
                                     <ReactPlayer url={movieDescription[0].trailer} height="320px" />
                                 </Offcanvas.Body>
                             </div>
                         </Col>
-                        <Col style={{ position: 'relative' }} >
+                        <Col sm={5} style={{ position: 'relative' }} >
                             <div className='description-layout'>
 
                                 <div>
