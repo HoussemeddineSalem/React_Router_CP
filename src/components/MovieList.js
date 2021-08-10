@@ -1,6 +1,6 @@
 import React from 'react';
 import MovieCard from "./MovieCard";
-import { Route } from 'react-router-dom';
+
 
 function MovieList({ movieName, titleSearch, ratingSearch }) {
 

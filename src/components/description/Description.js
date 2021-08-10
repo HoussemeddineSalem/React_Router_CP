@@ -1,50 +1,54 @@
-import React, { useState } from 'react';
+import React from 'react';
 import MovieData from '../MovieData';
-import { Link, Route } from 'react-router-dom'
-import { Button, Offcanvas, Container, Row, Col } from 'react-bootstrap';
+import { Link } from 'react-router-dom'
+import { Offcanvas, Container, Row, Col } from 'react-bootstrap';
 import ReactPlayer from 'react-player';
-import './Description.css'
+import './Description.css';
+
 
 function Description({ match }) {
-    const movieDescription = MovieData.filter((mov) => mov.id == match.params.id);
-    console.log(match)
-    console.log(movieDescription)
-
+    const movieDescription = MovieData.filter((mov) => Number(mov.id) === Number(match.params.id));
 
 
     return (
         <>
 
             <Offcanvas show={true} onHide={false} placement='top' name='top' className="offcanvas-style">
-                <Container className="container">
+                <Container className="container" >
                     <Row>
                         <Offcanvas.Header closeButton>
                             <Offcanvas.Title><h1>{movieDescription[0].title}</h1></Offcanvas.Title>
                         </Offcanvas.Header>
                     </Row>
                     <Row>
-                        <Col>
 
-                            <Offcanvas.Body>
-                                <ReactPlayer url={movieDescription[0].trailer} />
-
-                            </Offcanvas.Body>
+                        <Col style={{ position: 'relative' }}>
+                            <div>
+                                <Offcanvas.Body>
+                                    <ReactPlayer url={movieDescription[0].trailer} height="320px" />
+                                </Offcanvas.Body>
+                            </div>
                         </Col>
-                        <Col style={{position:'relative'}} >
+                        <Col style={{ position: 'relative' }} >
                             <div className='description-layout'>
+
                                 <div>
-                                    <h2>Description</h2>
+                                    <h3>Description</h3>
                                     <hr />
-                                    <h3>{movieDescription[0].description}</h3>
+                                    <h4>{movieDescription[0].description}</h4>
                                 </div>
-                                <div >
-                                    <Link to='/'><button>Return to Home Page</button></Link>
+                                <div className='return-home-btn'>
+                                    <Link to='/'>
+                                        <img className='return-home-logo' src="https://image.flaticon.com/icons/png/512/846/846551.png" alt="..." />
+                                    </Link>
+
                                 </div>
 
 
 
                             </div>
                         </Col>
+
                     </Row>
                 </Container>
             </Offcanvas>

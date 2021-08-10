@@ -1,22 +1,14 @@
 /*Styling the Navbar*/
-.nav-bar-styl{
-    font-family: 'Ubuntu', sans-serif;
-    
-    padding-left:100px;
-    border-radius: 5px;
-    background-color: #b2bec3;
+.nav-bar-styl {
+  font-family: "Ubuntu", sans-serif;
+  border-radius: 5px;
+  background-color: #e6ddc6;
+  display: flex;
+  justify-content: space-around;
+  padding: 0%;
 }
 
-.nav-bar-brand-styl{
-    margin-left:30px;
-    margin-right:20px;
-    font-size: 30px;
-    font-weight: bold;
+.nav-bar-brand-styl {
+  font-size: 40px;
+  font-weight: bold;
 }
-
-/*Styling rating stars of the NavBar*/
-.react-stars-styl{
-    margin-right: 30px;
-    margin-left: 30px;
-    
-}  

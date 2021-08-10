@@ -3,7 +3,7 @@ import MovieData from '../src/components/MovieData';
 
 import MovieList from "../src/components/MovieList";
 import NavBar from "./components/NavBar";
-import { Link, Route } from 'react-router-dom';
+import {Route } from 'react-router-dom';
 import Description from "./components/description/Description";
 
 
